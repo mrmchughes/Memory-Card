@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.GameHeader {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.GameIntro {
+  float: left;
+}
+/*use a cool fantasy font */
+
+.scoreBoard {
+  float: right;
+}
+
+.cardGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 33%;
+
+  margin: 0 auto;
+}
+
+.gridItem {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 1px solid #918868;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
