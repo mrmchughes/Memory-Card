@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CardMaker(props) {
-  const { image, alt, name } = props;
+  const { image, alt, name, hasBeenClicked } = props;
   return (
     <div>
       <div className="card">
