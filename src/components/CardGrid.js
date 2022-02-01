@@ -14,7 +14,7 @@ function CardGrid() {
     require.context("/src/imgs", false, /\.(png|jpe?g|svg)$/)
   );
 
-  const cards = [
+  const [cards, setCards] = useState([
     {
       image: images["Grog2.jpg"],
       alt: "Grog",
@@ -69,8 +69,9 @@ function CardGrid() {
       name: "Vexahlia",
       hasBeenClicked: false,
     },
-  ];
+  ]);
 
+  //rework shuffle to be more my own
   function shuffle(a) {
     let ctr = a.length,
       temp,
@@ -85,28 +86,28 @@ function CardGrid() {
     return a;
   }
 
-  const [list, setList] = useState(cards);
+  //look at this useEffect to see if I can make any improvements of my own
   useEffect(() => {
     const mountArray = shuffle([...cards]);
-    setList(mountArray);
+    setCards(mountArray);
   }, []);
 
+  //eventually need to remove the console.log
   function handleShuffle() {
-    const changes = shuffle([...list]);
-    setList(changes);
+    const changes = shuffle([...cards]);
+    setCards(changes);
     console.log("Shuffle", cards);
   }
 
+  //work on score/setScore, needs to send scores to GameHeader
   const [score, setScore] = useState(0);
-  //perhaps better for setScore to be put into the Card Grid, and the value updated here
   const [highScore, setHighScore] = useState(0);
 
   return (
     <div className="cardGridContainer">
-      {list.map((card) => (
-        <div onClick={handleShuffle} key={card.name}>
+      {cards.map((card) => (
+        <div onClick={handleShuffle} key={card.name} className="gridItem">
           <CardMaker
-            className="gridItem"
             image={card.image}
             alt={card.alt}
             name={card.name}
