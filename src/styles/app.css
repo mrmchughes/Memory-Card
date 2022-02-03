@@ -19,36 +19,34 @@
 .cardGridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   width: 33%;
 
   margin: 0 auto;
 }
 
-.gridItem {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
 .card img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  margin-top: 5px;
 }
 
 .card p {
   flex: 1;
 }
 
-.gridItem .card {
+.card {
+  grid-column: span 1;
+  grid-row: span 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
 
   width: 250px;
-  height: 250px;
+  height: 225px;
+  text-align: center;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;

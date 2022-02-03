@@ -19,55 +19,46 @@ function CardGrid() {
       image: images["Grog2.jpg"],
       alt: "Grog",
       name: "Grog Strongjaw",
-      hasBeenClicked: false,
     },
     {
       image: images["Keyleth2.jpg"],
       alt: "Keyleth",
       name: "Keyleth",
-      hasBeenClicked: false,
     },
     {
       image: images["Percy2.jpg"],
       alt: "Percy",
       name: "Percival de Rolo",
-      hasBeenClicked: false,
     },
     {
       image: images["Pike2.jpg"],
       alt: "Pike",
       name: "Pike Trickfoot",
-      hasBeenClicked: false,
     },
     {
       image: images["Scanlan2.jpg"],
       alt: "Scanlan",
       name: "Scanlan Shorthalt",
-      hasBeenClicked: false,
     },
     {
       image: images["Taryon2.jpg"],
       alt: "Taryon",
       name: "Taryon Darrington",
-      hasBeenClicked: false,
     },
     {
       image: images["Trinket.jpg"],
       alt: "Trinket",
       name: "Trinket",
-      hasBeenClicked: false,
     },
     {
       image: images["Vaxildan2.jpg"],
       alt: "Vaxildan",
       name: "Vaxildan",
-      hasBeenClicked: false,
     },
     {
       image: images["Vexahlia2.jpg"],
       alt: "Vexahlia",
       name: "Vexahlia",
-      hasBeenClicked: false,
     },
   ]);
 
@@ -87,6 +78,7 @@ function CardGrid() {
   }
 
   //look at this useEffect to see if I can make any improvements of my own
+  //currently runs on load and each time a card is clicked
   useEffect(() => {
     const mountArray = shuffle([...cards]);
     setCards(mountArray);
@@ -94,8 +86,8 @@ function CardGrid() {
 
   //eventually need to remove the console.log
   function handleShuffle() {
-    const changes = shuffle([...cards]);
-    setCards(changes);
+    const cardShuffle = shuffle([...cards]);
+    setCards(cardShuffle);
     console.log("Shuffle", cards);
   }
 
@@ -106,14 +98,15 @@ function CardGrid() {
   return (
     <div className="cardGridContainer">
       {cards.map((card) => (
-        <div onClick={handleShuffle} key={card.name} className="gridItem">
-          <CardMaker
-            image={card.image}
-            alt={card.alt}
-            name={card.name}
-            hasBeenClicked={card.hasBeenClicked}
-          />
-        </div>
+        <CardMaker
+          key={card.name}
+          handleShuffle={handleShuffle}
+          className="gridItem"
+          image={card.image}
+          alt={card.alt}
+          name={card.name}
+          hasBeenClicked={card.hasBeenClicked}
+        />
       ))}
     </div>
   );
