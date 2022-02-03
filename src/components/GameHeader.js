@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-function GameHeader() {
+function GameHeader(props) {
+  const { score, highScore } = props;
+
   return (
     <div className="GameHeader">
       <div className="GameIntro">
@@ -13,8 +15,8 @@ function GameHeader() {
       </div>
 
       <div className="scoreBoard">
-        <div>Score: {}</div>
-        <div>High Score: {}</div>
+        <div>Score: {score}</div>
+        <div>High Score: {highScore}</div>
       </div>
     </div>
   );

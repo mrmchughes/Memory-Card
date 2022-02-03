@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 
 function CardMaker(props) {
-  const { image, alt, name, handleShuffle } = props;
+  const { image, alt, name, handleShuffle, incrementScore, endGame } = props;
 
   const [clicked, setClicked] = useState(false);
+
+  function handleClick() {
+    if (!clicked) {
+      setClicked(true);
+      incrementScore();
+      handleShuffle();
+    } else {
+      endGame();
+    }
+  }
 
   let cardInfo = "";
 
   clicked
     ? (cardInfo = "has been clicked")
     : (cardInfo = "has not been clicked");
-
-  function handleClick() {
-    setClicked(true);
-    handleShuffle();
-  }
 
   return (
     <div className="card" onClick={handleClick}>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardMaker from "./CardMaker";
+import GameHeader from "./GameHeader";
 
 function CardGrid() {
   function importAll(r) {
@@ -93,21 +94,47 @@ function CardGrid() {
 
   //work on score/setScore, needs to send scores to GameHeader
   const [score, setScore] = useState(0);
+
   const [highScore, setHighScore] = useState(0);
 
+  function incrementScore() {
+    setScore(score + 1);
+  }
+
+  // if gameState = false, end the game
+  const [gameOver, setGameOver] = useState(false);
+
+  function endGame() {
+    alert("Game Over! That card had already been selected.");
+
+    if (score > highScore) {
+      setHighScore(score);
+    }
+    setGameOver(true);
+    setScore(0);
+  }
+
+  //need to target the specific card, and change it's state
+  //also need to reset all cards states on gameOver
+
   return (
-    <div className="cardGridContainer">
-      {cards.map((card) => (
-        <CardMaker
-          key={card.name}
-          handleShuffle={handleShuffle}
-          className="gridItem"
-          image={card.image}
-          alt={card.alt}
-          name={card.name}
-          hasBeenClicked={card.hasBeenClicked}
-        />
-      ))}
+    <div>
+      <GameHeader score={score} highScore={highScore} />
+
+      <div className="cardGridContainer">
+        {cards.map((card) => (
+          <CardMaker
+            image={card.image}
+            alt={card.alt}
+            name={card.name}
+            key={card.name}
+            handleShuffle={handleShuffle}
+            incrementScore={incrementScore}
+            endGame={endGame}
+            className="gridItem"
+          />
+        ))}
+      </div>
     </div>
   );
 }
