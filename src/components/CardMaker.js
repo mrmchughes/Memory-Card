@@ -1,22 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 function CardMaker(props) {
-  const { image, alt, name, handleShuffle, incrementScore, endGame } = props;
-
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    if (!clicked) {
-      setClicked(true);
-      incrementScore();
-      handleShuffle();
-    } else {
-      endGame();
-    }
-  };
+  const { image, alt, name, handleClick } = props;
 
   return (
-    <div className="card" onClick={handleClick}>
+    <div className="card" onClick={() => handleClick(name)}>
       <img src={image} alt={alt}></img>
 
       <p>{name}</p>
