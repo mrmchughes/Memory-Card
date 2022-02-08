@@ -29,8 +29,9 @@
 
 **Michael Hughes**
 
-- [Profile] https://github.com/mrmchughes
-- [Email] mrmchughes27@gmail.com
+- Github https://github.com/mrmchughes
+- Email mrmchughes27@gmail.com
+- Linkedin https://www.linkedin.com/in/michaelhughes27/
 
 Contributions, issues, and feature requests are welcome!
 
