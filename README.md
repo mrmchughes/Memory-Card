@@ -9,11 +9,11 @@
 
 - [Repo] https://github.com/mrmchughes/Memory-Card
 
-- [Live](<Homepage url> "Live View")
+- [Live] https://mrmchughes.github.io/Memory-Card/
 
 ## Screenshots
 
-[Main Page](/screenshots/1.png "Home Page")
+[Main Page] ![image](https://user-images.githubusercontent.com/10659805/153058789-c29aa45f-28d7-4bbc-8905-9ebbfa880e4d.png)
 
 ## Built With
 
