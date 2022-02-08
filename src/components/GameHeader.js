@@ -8,10 +8,10 @@ function GameHeader(props) {
       <div className="GameIntro">
         <h1>Critical Role Memory Game</h1>
 
-        <div>
+        <p>
           Get points by clicking on an image, but don't click on any image more
           than once!
-        </div>
+        </p>
       </div>
 
       <div className="scoreBoard">

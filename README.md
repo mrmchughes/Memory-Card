@@ -1,8 +1,8 @@
-<h1 align="center">Memory Card</h1>
+<h1>Memory Card</h1>
 
-<p align="center">I developed this React app as part of [The Odin Project's](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card) Fullstack curriculum. This project was another milestone for me, as this project was developed with React Hooks/Functional Components.</p>
+<p>I developed this React app as part of [The Odin Project's](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card) Fullstack curriculum. This project was another milestone for me, as it was developed with React Hooks/Functional Components.</p>
 
-<p align="center">Developed a card based Memory game, where players click on a card in an array, and attempt to remember which ones they have already selected. When the player clicks a card that they have already clicked previously, the game ends, with an option to play again. The game tracks their current game's score, as well as the player's High Score.
+<p>I developed a Card Memory game, where players click on a card in an array, and attempt to remember which ones they have already selected. When the player clicks a card that they have already clicked previously, the game ends, with a new game immediately starting. The game tracks the current game's score, as well as the player's High Score.
 </p>
 
 ## Links
@@ -38,4 +38,6 @@ Give a ⭐️ if you like this project!
 
 # Credit
 
-The code for const shuffle was originally written by user ikmo at https://stackoverflow.com/questions/63540873/react-hooks-shuffle-array-immediately-on-load-and-onclick. The art for the cards is taken from https://criticalrole.fandom.com/wiki/Critical_Role_Wiki.
+The code for const shuffle was originally written by user ikmo at https://stackoverflow.com/questions/63540873/react-hooks-shuffle-array-immediately-on-load-and-onclick.
+
+The art for the cards is taken from https://criticalrole.fandom.com/wiki/Critical_Role_Wiki.

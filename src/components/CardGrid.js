@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import uniqid from "uniqid";
 import CardMaker from "./CardMaker";
 import GameHeader from "./GameHeader";
@@ -15,9 +15,6 @@ function CardGrid() {
   const images = importAll(
     require.context("/src/imgs", false, /\.(png|jpe?g|svg)$/)
   );
-
-  const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
 
   const [cards, setCards] = useState([
     {
@@ -457,7 +454,9 @@ function CardGrid() {
     },
   ];
 
-  //rework shuffle to be more my own
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
   const shuffle = (a) => {
     let ctr = a.length,
       temp,
@@ -482,13 +481,12 @@ function CardGrid() {
   };
 
   const endGame = () => {
-    console.log("Game Over! That card had already been selected.");
-
     if (score > highScore) {
       setHighScore(score);
     }
 
     setScore(0);
+    console.log("Game finished");
     setCards(newGameCards);
   };
 

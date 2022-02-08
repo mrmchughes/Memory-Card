@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fffcff;
+}
+
 .GameHeader {
   overflow: hidden;
   padding: 20px 10px;
@@ -10,7 +14,6 @@
 .GameIntro {
   float: left;
 }
-/*use a cool fantasy font */
 
 .scoreBoard {
   float: right;
@@ -19,8 +22,8 @@
 .cardGridContainer {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  gap: 10px;
-  width: 75%;
+  grid-gap: 10px;
+  width: 66%;
   margin: 0 auto;
 }
 
@@ -47,8 +50,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
+  border: 1px solid #247ba0;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 #424242;
 }
