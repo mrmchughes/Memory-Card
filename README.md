@@ -1,15 +1,11 @@
 <h1>Memory Card</h1>
 
-<p>I developed this React app as part of [The Odin Project's](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card) Fullstack curriculum. This project was another milestone for me, as it was developed with React Hooks/Functional Components.</p>
+I developed this React app as part of The Odin Project's Fullstack [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-memory-card).
+This project was another milestone for me, as it was developed with React Hooks/Functional Components.
 
-<p>I developed a Card Memory game, where players click on a card in an array, and attempt to remember which ones they have already selected. When the player clicks a card that they have already clicked previously, the game ends, with a new game immediately starting. The game tracks the current game's score, as well as the player's High Score.
-</p>
+I developed a Card Memory game, where players click on a card in an array, and attempt to remember which ones they have already selected. When the player clicks a card that they have already clicked previously, the game ends, with a new game immediately starting. The game tracks the current game's score, as well as the player's High Score.
 
-## Links
-
-- [Repo] https://github.com/mrmchughes/Memory-Card
-
-- [Live] https://mrmchughes.github.io/Memory-Card/
+[Live Demo](https://mrmchughes.github.io/Memory-Card/)
 
 ## Screenshots
 
@@ -17,13 +13,9 @@
 
 ## Built With
 
-- HTML
-- CSS
-- JavaScript
-- React
-- React Hooks
-- NPM
-- Webpack
+<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
 
 ## Author
 
